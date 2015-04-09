@@ -87,29 +87,30 @@ class CompanyTableViewController: UITableViewController {
         // Return the number of rows in the section.
 //        return companies.count
         
-        return FeedData.mainData().companies.count
+        return array.count
+        
     }
 
 
+var array = ["Coke","Beats","Apple", "Microsoft", "Dell","Sony","GitHub","Samsung","Droid",]
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("compCells", forIndexPath: indexPath) as UITableViewCell
 
        // let company = companies[indexPath.row]
         
-        let company = FeedData.mainData().companies[indexPath.row]
+        var newProject = array[indexPath.row]
         
-//        cell.textLabel?.text = company.name
-        
-        cell.textLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 24)
+        cell.textLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 23)
         cell.textLabel?.textColor = UIColor(red: 0.58, green: 0.84, blue: 0.79, alpha: 1)
+        //  cell.textLabel?.textColor = UIColor.blackColor()
         
-        cell.textLabel?.text = company
+        cell.textLabel?.text = newProject
         
         // Configure the cell...
-
+        
         return cell
     }
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

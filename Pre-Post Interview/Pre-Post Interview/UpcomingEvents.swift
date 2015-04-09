@@ -76,9 +76,9 @@ class UpcomingEvents: UITableViewController {
         var myLabel: UILabel!
        
         myLabel = UILabel(frame: CGRectMake((SCREEN_WIDTH / 2) - 90, 8, 180, 30))
-        myLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 26)
+        myLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 20)
         myLabel.textColor = UIColor(red: 0.58, green: 0.84, blue: 0.79, alpha: 1)
-        myLabel.text = "March 17, 2015"
+        myLabel.text = "February 16, 2015"
         
         
         var sectionView = UIView()
@@ -103,7 +103,7 @@ class UpcomingEvents: UITableViewController {
         return 50
     }
     
-    var array = ["Home Depot","Coke","SRI", "Apple"]
+    var array = ["1.3.15          Coke - Send Resume","1.6.15          Beats - Email","1.8.15          Apple - Cover Letter", "1.14.15        Microsoft - Call CEO", "1.26.15        Dell - Follow Up","2.12.15        Sony - Apply","GitHub           |           2/29/2015","Samsung       |           2/29/2015","Droid              |           2/29/2015",]
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -111,7 +111,7 @@ class UpcomingEvents: UITableViewController {
         
         var newProject = array[indexPath.row]
         
-        cell.textLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 24)
+        cell.textLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 23)
         cell.textLabel?.textColor = UIColor(red: 0.58, green: 0.84, blue: 0.79, alpha: 1)
      //  cell.textLabel?.textColor = UIColor.blackColor()
         
@@ -121,6 +121,15 @@ class UpcomingEvents: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 85
+    
+    }
+}
+
+
+
     
 
     /*
@@ -168,4 +177,4 @@ class UpcomingEvents: UITableViewController {
     }
     */
 
-}
+
